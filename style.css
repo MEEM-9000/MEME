@@ -258,26 +258,66 @@ p {
 
 
 /* ==================================================
-   INTRO
+   INTRO / MEME
    ================================================== */
 
 .intro {
   display: grid;
 
   grid-template-columns:
-    minmax(180px, 0.8fr)
-    minmax(0, 1.6fr);
+    minmax(235px, 29%)
+    minmax(0, 1fr);
 
-  gap: 70px;
+  gap: 50px;
+
+  align-items: start;
 }
 
-..intro-mark {
+.intro-mark {
+  min-width: 0;
+  width: 100%;
+
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: clamp(5.2rem, 8.5vw, 8.5rem);
-  line-height: .78;
+  line-height: 0.78;
+
+  font-weight: 400;
+
   color: var(--earth);
-  opacity: .75;
+  opacity: 0.75;
+
   white-space: nowrap;
+}
+
+.intro-copy {
+  min-width: 0;
+  width: 100%;
+}
+
+.intro-copy h2 {
+  max-width: 800px;
+  margin-bottom: 32px;
+}
+
+.lead {
+  max-width: 780px;
+
+  margin: 0 0 22px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(1.35rem, 2.7vw, 2.1rem);
+  line-height: 1.4;
+}
+
+.intro-copy p:not(.lead):not(.eyebrow) {
+  max-width: 700px;
+
+  color: var(--muted);
+
+  font-size: 1.05rem;
+  line-height: 1.65;
 }
 
 
