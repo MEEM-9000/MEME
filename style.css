@@ -297,10 +297,12 @@ p {
 
 .intro-copy h2 {
   max-width: 800px;
+
   margin-bottom: 32px;
 }
 
 .lead {
+  width: 100%;
   max-width: 780px;
 
   margin: 0 0 22px;
@@ -312,6 +314,7 @@ p {
 }
 
 .intro-copy p:not(.lead):not(.eyebrow) {
+  width: 100%;
   max-width: 700px;
 
   color: var(--muted);
@@ -500,10 +503,10 @@ p {
 /* ==================================================
    EVENT DETAILS BUTTONS
    Both classes are intentionally identical.
-   
+
    Flora currently uses .event-link.
    Other events currently use .event-details-button.
-   
+
    Styling both here preserves all existing HTML links.
    ================================================== */
 
@@ -609,13 +612,33 @@ p {
     padding: 75px 22px;
   }
 
+  /* MEME remains a two-part composition on tablet.
+     The mark sits beside the text instead of forcing
+     the text into a narrow vertical column. */
+
   .intro {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    grid-template-columns:
+      minmax(150px, 28%)
+      minmax(0, 1fr);
+
+    gap: 32px;
   }
 
   .intro-mark {
-    font-size: 4.5rem;
+    font-size: clamp(4.5rem, 10vw, 6.5rem);
+  }
+
+  .intro-copy h2 {
+    margin-bottom: 24px;
+  }
+
+  .lead {
+    font-size: 1.5rem;
+    line-height: 1.45;
+  }
+
+  .intro-copy p:not(.lead):not(.eyebrow) {
+    font-size: 1rem;
   }
 
   .player-card {
@@ -668,7 +691,7 @@ p {
 /* ==================================================
    LARGE MOBILE / GSM
    601px – 700px
-   
+
    IMPORTANT:
    Two-column event layout is deliberately maintained.
    This prevents the previous 3-column override.
@@ -693,13 +716,54 @@ p {
     padding: 65px 20px;
   }
 
+  /* MEME switches cleanly to a full-width stacked
+     layout at phone width. */
+
   .intro {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    display: block;
+    width: 100%;
   }
 
   .intro-mark {
-    font-size: 4.5rem;
+    width: 100%;
+
+    margin: 0 0 28px;
+
+    font-size: clamp(5rem, 18vw, 7rem);
+    line-height: 0.78;
+  }
+
+  .intro-copy {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .intro-copy h2 {
+    width: 100%;
+    max-width: none;
+
+    margin-bottom: 24px;
+
+    font-size: clamp(2.3rem, 8vw, 3.4rem);
+    line-height: 1.05;
+  }
+
+  .lead {
+    width: 100%;
+    max-width: none;
+
+    margin-bottom: 20px;
+
+    font-size: 1.3rem;
+    line-height: 1.45;
+  }
+
+  .intro-copy p:not(.lead):not(.eyebrow) {
+    width: 100%;
+    max-width: none;
+
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .player-card {
@@ -826,9 +890,72 @@ p {
     padding: 60px 18px;
   }
 
-  .lead {
-    font-size: 1.2rem;
+
+  /* ----------------------------------------------
+     MEME INTRO — MOBILE
+     ---------------------------------------------- */
+
+  .intro {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
   }
+
+  .intro-mark {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 0 28px;
+
+    font-size: clamp(5rem, 22vw, 7rem);
+    line-height: 0.78;
+
+    white-space: nowrap;
+  }
+
+  .intro-copy {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .intro-copy h2 {
+    width: 100%;
+    max-width: none;
+
+    margin-bottom: 24px;
+
+    font-size: clamp(2.3rem, 10vw, 3.4rem);
+    line-height: 1.05;
+  }
+
+  .lead {
+    width: 100%;
+    max-width: none;
+
+    margin-bottom: 20px;
+
+    font-size: 1.3rem;
+    line-height: 1.45;
+  }
+
+  .intro-copy p:not(.lead):not(.eyebrow) {
+    width: 100%;
+    max-width: none;
+
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+
+  /* ----------------------------------------------
+     MUSIC
+     ---------------------------------------------- */
 
   .player-card {
     grid-template-columns:
@@ -851,6 +978,11 @@ p {
   .track-info p {
     font-size: 0.78rem;
   }
+
+
+  /* ----------------------------------------------
+     EVENTS
+     ---------------------------------------------- */
 
   .event {
     grid-template-columns:
@@ -960,6 +1092,32 @@ p {
   nav a {
     font-size: 0.58rem;
   }
+
+
+  /* ----------------------------------------------
+     MEME INTRO — SMALL PHONES
+     ---------------------------------------------- */
+
+  .intro-mark {
+    font-size: clamp(4.5rem, 21vw, 6rem);
+  }
+
+  .intro-copy h2 {
+    font-size: clamp(2.15rem, 9.5vw, 3rem);
+  }
+
+  .lead {
+    font-size: 1.2rem;
+  }
+
+  .intro-copy p:not(.lead):not(.eyebrow) {
+    font-size: 0.98rem;
+  }
+
+
+  /* ----------------------------------------------
+     EVENTS
+     ---------------------------------------------- */
 
   .event {
     grid-template-columns:
