@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
 
-
 :root {
   --paper: #f1eee7;
   --ink: #25231f;
@@ -16,18 +15,25 @@
    RESET
    ================================================== */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+
   background: var(--paper);
   color: var(--ink);
+
   font-family: "DM Sans", sans-serif;
   line-height: 1.6;
 }
@@ -35,6 +41,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -55,13 +62,18 @@ a {
   align-items: center;
   justify-content: space-between;
 
+  width: 100%;
   max-width: var(--max);
-  margin: 0 auto;
 
+  margin: 0 auto;
   padding: 24px 32px;
+
+  gap: 24px;
 }
 
 .logo {
+  flex: 0 0 auto;
+
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -69,13 +81,24 @@ a {
 
 nav {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex-wrap: wrap;
+
   gap: 28px;
+
+  min-width: 0;
 }
 
 nav a {
+  flex: 0 0 auto;
+
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -88,7 +111,9 @@ nav a:hover {
    ================================================== */
 
 .section {
+  width: 100%;
   max-width: var(--max);
+
   margin: 0 auto;
   padding: 100px 32px;
 }
@@ -144,7 +169,6 @@ p {
 
 .hero-image {
   position: absolute;
-
   inset: 0;
 
   width: 100%;
@@ -156,7 +180,6 @@ p {
 
 .hero-overlay {
   position: absolute;
-
   inset: 0;
 
   background: rgba(0, 0, 0, 0.28);
@@ -165,6 +188,11 @@ p {
 .hero-content {
   position: relative;
   z-index: 2;
+
+  width: 100%;
+  max-width: 100%;
+
+  padding: 0 20px;
 
   text-align: center;
 
@@ -236,7 +264,9 @@ p {
 .intro {
   display: grid;
 
-  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.6fr);
+  grid-template-columns:
+    minmax(180px, 0.8fr)
+    minmax(0, 1.6fr);
 
   gap: 70px;
 }
@@ -251,12 +281,17 @@ p {
   color: var(--line);
 }
 
+.intro-copy {
+  min-width: 0;
+}
+
 .intro-copy h2 {
   margin-bottom: 32px;
 }
 
 .lead {
   font-family: "Playfair Display", serif;
+
   font-size: 1.45rem;
   line-height: 1.5;
 }
@@ -273,11 +308,16 @@ p {
 .player-card {
   display: grid;
 
-  grid-template-columns: 70px minmax(180px, 1fr) minmax(260px, 420px);
+  grid-template-columns:
+    70px
+    minmax(0, 1fr)
+    minmax(260px, 420px);
 
   align-items: center;
 
   gap: 30px;
+
+  min-width: 0;
 
   padding: 26px 0;
 
@@ -289,10 +329,16 @@ p {
 }
 
 .track-number {
+  min-width: 0;
+
   color: var(--muted);
 
   font-size: 0.8rem;
   letter-spacing: 0.1em;
+}
+
+.track-info {
+  min-width: 0;
 }
 
 .track-info h3 {
@@ -301,6 +347,8 @@ p {
   font-family: "Playfair Display", serif;
   font-size: 1.35rem;
   font-weight: 400;
+
+  overflow-wrap: anywhere;
 }
 
 .track-info p {
@@ -309,27 +357,38 @@ p {
   color: var(--muted);
 
   font-size: 0.85rem;
+
+  overflow-wrap: anywhere;
 }
 
-audio {
+.player-card audio {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 
-/* =========================================================
-   SHOWS / EVENTS — CLEAN RESPONSIVE VERSION
-   ========================================================= */
+/* ==================================================
+   SHOWS / EVENTS
+   ================================================== */
 
 .event-list {
   width: 100%;
   max-width: 100%;
+
   margin: 0;
   padding: 0;
 }
 
 .event {
   display: grid;
-  grid-template-columns: 120px minmax(0, 1fr) 96px;
+
+  grid-template-columns:
+    120px
+    minmax(0, 1fr)
+    96px;
+
   column-gap: 28px;
   row-gap: 8px;
 
@@ -346,15 +405,18 @@ audio {
 
 .event-date {
   grid-column: 1;
+
   min-width: 0;
   width: 100%;
 }
 
 .event-date strong {
   display: block;
+
   margin: 0;
 
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: 2.2rem;
   font-weight: 400;
   line-height: 1;
@@ -362,16 +424,19 @@ audio {
 
 .event-date span {
   display: block;
+
   margin-top: 5px;
 
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: .12em;
+
+  letter-spacing: 0.12em;
 }
 
 .event-details {
   grid-column: 2;
+
   min-width: 0;
   width: 100%;
 }
@@ -383,6 +448,7 @@ audio {
   padding: 0;
 
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: 1.35rem;
   font-weight: 400;
   line-height: 1.2;
@@ -399,15 +465,28 @@ audio {
 
   color: var(--muted);
 
-  font-size: .95rem;
+  font-size: 0.95rem;
   line-height: 1.45;
 
   white-space: normal;
   overflow-wrap: anywhere;
 }
 
-.event-link {
+
+/* ==================================================
+   EVENT DETAILS BUTTONS
+   Both classes are intentionally identical.
+   
+   Flora currently uses .event-link.
+   Other events currently use .event-details-button.
+   
+   Styling both here preserves all existing HTML links.
+   ================================================== */
+
+.event-link,
+.event-details-button {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
@@ -417,19 +496,18 @@ audio {
 
   padding: 0 10px;
 
-  box-sizing: border-box;
-
   border: 1px solid var(--ink);
 
   background: transparent;
   color: var(--ink);
 
   font-family: "DM Sans", Arial, sans-serif;
-  font-size: .68rem;
+
+  font-size: 0.68rem;
   font-weight: 700;
   line-height: 1;
 
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -439,25 +517,32 @@ audio {
   align-self: center;
 
   transition:
-    background .2s ease,
-    color .2s ease;
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .event-link:hover,
-.event-link:focus-visible {
+.event-link:focus-visible,
+.event-details-button:hover,
+.event-details-button:focus-visible {
   background: var(--ink);
   color: var(--paper);
 }
 
 
-/* =========================================================
-   LAPTOP — 901px to 1200px
-   ========================================================= */
+/* ==================================================
+   LAPTOP
+   901px – 1200px
+   ================================================== */
 
 @media (min-width: 901px) and (max-width: 1200px) {
 
   .event {
-    grid-template-columns: 105px minmax(0, 1fr) 92px;
+    grid-template-columns:
+      105px
+      minmax(0, 1fr)
+      92px;
+
     column-gap: 22px;
   }
 
@@ -466,25 +551,67 @@ audio {
   }
 
   .event-details p {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
-  .event-link {
+  .event-link,
+  .event-details-button {
     width: 92px;
     min-width: 92px;
   }
 }
 
 
-/* =========================================================
-   TABLET / iPAD — 701px to 900px
-   ========================================================= */
+/* ==================================================
+   TABLET / iPAD
+   701px – 900px
+   ================================================== */
 
 @media (min-width: 701px) and (max-width: 900px) {
 
+  .site-header {
+    padding: 20px 22px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 0.7rem;
+  }
+
+  .section {
+    padding: 75px 22px;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .intro-mark {
+    font-size: 4.5rem;
+  }
+
+  .player-card {
+    grid-template-columns: 45px minmax(0, 1fr);
+
+    gap: 15px;
+  }
+
+  .player-card audio {
+    grid-column: 2;
+  }
+
   .event {
-    grid-template-columns: 90px minmax(0, 1fr) 88px;
+    grid-template-columns:
+      90px
+      minmax(0, 1fr)
+      88px;
+
     column-gap: 18px;
+
     align-items: start;
   }
 
@@ -497,29 +624,80 @@ audio {
   }
 
   .event-details p {
-    font-size: .88rem;
+    font-size: 0.88rem;
   }
 
-  .event-link {
+  .event-link,
+  .event-details-button {
     width: 88px;
     min-width: 88px;
+
     align-self: start;
+  }
+
+  footer {
+    flex-direction: column;
   }
 }
 
 
-/* =========================================================
-   MOBILE — 700px and below
-   ========================================================= */
+/* ==================================================
+   LARGE MOBILE / GSM
+   601px – 700px
+   
+   IMPORTANT:
+   Two-column event layout is deliberately maintained.
+   This prevents the previous 3-column override.
+   ================================================== */
 
-@media (max-width: 700px) {
+@media (min-width: 601px) and (max-width: 700px) {
+
+  .site-header {
+    padding: 18px 20px;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+  }
+
+  .section {
+    padding: 65px 20px;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .intro-mark {
+    font-size: 4.5rem;
+  }
+
+  .player-card {
+    grid-template-columns: 38px minmax(0, 1fr);
+
+    gap: 14px;
+    padding: 23px 0;
+  }
+
+  .player-card audio {
+    grid-column: 2;
+  }
 
   .event {
-    grid-template-columns: 70px minmax(0, 1fr);
+    grid-template-columns:
+      70px
+      minmax(0, 1fr);
+
     column-gap: 14px;
     row-gap: 0;
 
-    padding: 17px 0;
+    padding: 20px 0;
 
     align-items: start;
   }
@@ -532,7 +710,8 @@ audio {
     grid-column: 2;
   }
 
-  .event-link {
+  .event-link,
+  .event-details-button {
     grid-column: 2;
 
     width: auto;
@@ -549,8 +728,8 @@ audio {
   }
 
   .event-date span {
-    font-size: .68rem;
-    letter-spacing: .08em;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
   }
 
   .event-details h3 {
@@ -560,20 +739,209 @@ audio {
 
   .event-details p {
     margin-top: 5px;
-    font-size: .85rem;
+
+    font-size: 0.84rem;
     line-height: 1.4;
+  }
+
+  footer {
+    flex-direction: column;
   }
 }
 
 
-/* =========================================================
-   VERY SMALL PHONES — 420px and below
-   ========================================================= */
+/* ==================================================
+   MOBILE
+   421px – 600px
+   ================================================== */
+
+@media (max-width: 600px) {
+
+  .site-header {
+    padding: 17px 18px;
+
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 1.15rem;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-content {
+    padding: 0 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(4.5rem, 25vw, 7rem);
+  }
+
+  .tagline {
+    max-width: 300px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .section {
+    padding: 60px 18px;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+  }
+
+  .player-card {
+    grid-template-columns:
+      34px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 23px 0;
+  }
+
+  .player-card audio {
+    grid-column: 2;
+  }
+
+  .track-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .track-info p {
+    font-size: 0.78rem;
+  }
+
+  .event {
+    grid-template-columns:
+      55px
+      minmax(0, 1fr);
+
+    column-gap: 12px;
+    row-gap: 0;
+
+    padding: 24px 0;
+  }
+
+  .event-date {
+    grid-column: 1;
+  }
+
+  .event-details {
+    grid-column: 2;
+  }
+
+  .event-link,
+  .event-details-button {
+    grid-column: 2;
+
+    width: auto;
+    min-width: 76px;
+
+    margin-top: 6px;
+
+    padding: 8px 13px;
+
+    justify-self: start;
+    align-self: start;
+
+    font-size: 0.65rem;
+  }
+
+  .event-date strong {
+    font-size: 1.8rem;
+  }
+
+  .event-date span {
+    font-size: 0.55rem;
+    letter-spacing: 0.06em;
+  }
+
+  .event-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .event-details p {
+    font-size: 0.76rem;
+  }
+
+  .photo-break-cover {
+    height: 58vh;
+    min-height: 360px;
+  }
+
+  .photo-caption {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+
+    font-size: 0.62rem;
+  }
+
+  .socials {
+    gap: 8px;
+  }
+
+  .social-button {
+    padding: 8px 11px;
+
+    font-size: 0.62rem;
+  }
+
+  .email {
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  footer {
+    padding: 30px 18px;
+    flex-direction: column;
+  }
+}
+
+
+/* ==================================================
+   VERY SMALL PHONES
+   420px and below
+   ================================================== */
 
 @media (max-width: 420px) {
 
+  .site-header {
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 0.58rem;
+  }
+
   .event {
-    grid-template-columns: 62px minmax(0, 1fr);
+    grid-template-columns:
+      62px
+      minmax(0, 1fr);
+
     column-gap: 12px;
   }
 
@@ -582,7 +950,7 @@ audio {
   }
 
   .event-date span {
-    font-size: .58rem;
+    font-size: 0.58rem;
   }
 
   .event-details h3 {
@@ -590,9 +958,19 @@ audio {
   }
 
   .event-details p {
-    font-size: .82rem;
+    font-size: 0.82rem;
+  }
+
+  .event-link,
+  .event-details-button {
+    min-width: 76px;
+  }
+
+  .email {
+    font-size: 1.15rem;
   }
 }
+
 
 /* ==================================================
    FINAL PHOTOGRAPH
@@ -640,6 +1018,8 @@ audio {
 .email {
   display: inline-block;
 
+  max-width: 100%;
+
   margin-top: 12px;
 
   font-family: "Playfair Display", serif;
@@ -647,6 +1027,9 @@ audio {
   font-size: clamp(1.3rem, 3vw, 2rem);
 
   border-bottom: 1px solid var(--ink);
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .socials {
@@ -692,6 +1075,7 @@ audio {
    ================================================== */
 
 footer {
+  width: 100%;
   max-width: var(--max);
 
   margin: 0 auto;
@@ -700,6 +1084,7 @@ footer {
 
   display: flex;
   justify-content: space-between;
+
   gap: 20px;
 
   color: var(--muted);
@@ -707,191 +1092,4 @@ footer {
   font-size: 0.7rem;
 
   border-top: 1px solid var(--line);
-}
-
-
-/* ==================================================
-   TABLET
-   ================================================== */
-
-@media (max-width: 800px) {
-
-  .site-header {
-    padding: 20px;
-  }
-
-  nav {
-    gap: 15px;
-  }
-
-  nav a {
-    font-size: 0.7rem;
-  }
-
-  .section {
-    padding: 75px 22px;
-  }
-
-  .intro {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .intro-mark {
-    font-size: 4.5rem;
-  }
-
-  .player-card {
-    grid-template-columns: 45px 1fr;
-    gap: 15px;
-  }
-
-  .player-card audio {
-    grid-column: 2;
-  }
-
-  .event {
-    grid-template-columns: 80px minmax(0, 1fr) auto;
-    gap: 18px;
-  }
-
-  .event-details-button {
-    min-width: 78px;
-    padding: 9px 12px;
-  }
-
-  footer {
-    flex-direction: column;
-  }
-
-}
-
-
-/* ==================================================
-   MOBILE
-   ================================================== */
-
-@media (max-width: 600px) {
-
-  .site-header {
-    padding: 17px 18px;
-  }
-
-  .logo {
-    font-size: 1.15rem;
-  }
-
-  nav {
-    gap: 10px;
-  }
-
-  nav a {
-    font-size: 0.62rem;
-    letter-spacing: 0.05em;
-  }
-
-  .hero {
-    min-height: 70vh;
-  }
-
-  .hero h1 {
-    font-size: clamp(4.5rem, 25vw, 7rem);
-  }
-
-  .tagline {
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-
-    font-size: 0.75rem;
-    line-height: 1.5;
-  }
-
-  .section {
-    padding: 60px 18px;
-  }
-
-  .lead {
-    font-size: 1.2rem;
-  }
-
-  .player-card {
-    grid-template-columns: 34px 1fr;
-
-    padding: 23px 0;
-  }
-
-  .track-info h3 {
-    font-size: 1.2rem;
-  }
-
-  .track-info p {
-    font-size: 0.78rem;
-  }
-
-  .event {
-    grid-template-columns: 55px minmax(0, 1fr);
-
-    gap: 12px;
-
-    padding: 24px 0;
-  }
-
-  .event-date strong {
-    font-size: 1.8rem;
-  }
-
-  .event-date span {
-    font-size: 0.55rem;
-  }
-
-  .event-details h3 {
-    font-size: 1.2rem;
-  }
-
-  .event-details p {
-    font-size: 0.76rem;
-  }
-
-  .event-details-button {
-    grid-column: 2;
-
-    justify-self: start;
-
-    min-width: 76px;
-
-    margin-top: 6px;
-
-    padding: 8px 13px;
-
-    font-size: 0.65rem;
-  }
-
-  .photo-break-cover {
-    height: 58vh;
-    min-height: 360px;
-  }
-
-  .photo-caption {
-    left: 18px;
-    right: 18px;
-    bottom: 18px;
-
-    font-size: 0.62rem;
-  }
-
-  .socials {
-    gap: 8px;
-  }
-
-  .social-button {
-    padding: 8px 11px;
-
-    font-size: 0.62rem;
-  }
-
-  footer {
-    padding: 30px 18px;
-  }
-
 }
