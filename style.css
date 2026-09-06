@@ -271,29 +271,13 @@ p {
   gap: 70px;
 }
 
-.intro-mark {
-  font-size: clamp(4rem, 10vw, 9rem);
-  line-height: 0.8;
-
-  font-weight: 700;
-  letter-spacing: -0.08em;
-
-  color: var(--line);
-}
-
-.intro-copy {
-  min-width: 0;
-}
-
-.intro-copy h2 {
-  margin-bottom: 32px;
-}
-
-.lead {
-  font-family: "Playfair Display", serif;
-
-  font-size: 1.45rem;
-  line-height: 1.5;
+..intro-mark {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(5.2rem, 8.5vw, 8.5rem);
+  line-height: .78;
+  color: var(--earth);
+  opacity: .75;
+  white-space: nowrap;
 }
 
 
