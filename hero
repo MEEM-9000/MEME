@@ -193,9 +193,9 @@
 
       <a href="#MEME">MEME</a>
 
-      <a href="#listen">Listen</a>
-
       <a href="#Shows">Shows</a>
+
+      <a href="#listen">Listen</a>
 
       <a href="#contact">Contact</a>
 
@@ -241,7 +241,7 @@
 
         <a
           class="button"
-          href="#listen"
+          href="#Shows"
           aria-label="Listen to MEME — Mark and Elke"
         >
           Listen
@@ -310,213 +310,7 @@
 
     </section>
 
-
-    <!-- LISTEN -->
-
-    <section
-      id="listen"
-      class="music section"
-      aria-labelledby="listen-heading"
-    >
-
-      <div class="section-title">
-
-        <p class="eyebrow">
-          MEME — ORIGINAL MUSIC
-        </p>
-
-        <h2 id="listen-heading">
-          Listen
-        </h2>
-
-        <p>
-          Original music, poetry and texts by Mark Davey &amp; Elke Van De Walle.
-        </p>
-
-      </div>
-
-
-      <div class="player-card">
-
-        <div class="track-number" aria-hidden="true">01</div>
-
-        <div class="track-info">
-
-          <h3>Introduction</h3>
-
-          <p>
-            Original music and texts by
-            MEME.
-          </p>
-
-        </div>
-
-        <audio
-          controls
-          preload="metadata"
-          aria-label="MEME — Mark and Elke — Introduction"
-        >
-          <source
-            src="audio/1. Introduction_FINAL-e.mp3"
-            type="audio/mpeg"
-          >
-          Your browser does not support audio playback.
-        </audio>
-
-      </div>
-
-
-      <div class="player-card">
-
-        <div class="track-number" aria-hidden="true">02</div>
-
-        <div class="track-info">
-
-          <h3>Doh</h3>
-
-          <p>
-            Original music and texts by MEME.
-          </p>
-
-        </div>
-
-        <audio
-          controls
-          preload="metadata"
-          aria-label="MEME — Mark and Elke — Doh"
-        >
-          <source
-            src="audio/2. Doh.mp3"
-            type="audio/mpeg"
-          >
-          Your browser does not support audio playback.
-        </audio>
-
-      </div>
-
-
-      <div class="player-card">
-
-        <div class="track-number" aria-hidden="true">03</div>
-
-        <div class="track-info">
-
-          <h3>Pupil</h3>
-
-          <p>
-            Original music and texts by
-            MEME.
-          </p>
-
-        </div>
-
-        <audio
-          controls
-          preload="metadata"
-          aria-label="MEME — Mark and Elke — Pupil"
-        >
-          <source
-            src="audio/3. Pupil_FINAL-c.mp3"
-            type="audio/mpeg"
-          >
-          Your browser does not support audio playback.
-        </audio>
-
-      </div>
-
-
-      <div class="player-card">
-
-        <div class="track-number" aria-hidden="true">04</div>
-
-        <div class="track-info">
-
-          <h3>Tol</h3>
-
-          <p>
-            Original music and texts by
-            MEME.
-          </p>
-
-        </div>
-
-        <audio
-          controls
-          preload="metadata"
-          aria-label="MEME — Mark and Elke — Tol"
-        >
-          <source
-            src="audio/4. Tol_FINAL-c.mp3"
-            type="audio/mpeg"
-          >
-          Your browser does not support audio playback.
-        </audio>
-
-      </div>
-
-
-      <div class="player-card">
-
-        <div class="track-number" aria-hidden="true">05</div>
-
-        <div class="track-info">
-
-          <h3>Funky Afscheid</h3>
-
-          <p>
-            Original music and texts by MEME.
-          </p>
-
-        </div>
-
-        <audio
-          controls
-          preload="metadata"
-          aria-label="MEME — Mark and Elke — Funky Afscheid"
-        >
-          <source
-            src="audio/5. Funky_Afscheid_FINAL2c.mp3"
-            type="audio/mpeg"
-          >
-          Your browser does not support audio playback.
-        </audio>
-
-      </div>
-
-
-      <div class="player-card">
-
-        <div class="track-number" aria-hidden="true">06</div>
-
-        <div class="track-info">
-
-          <h3>Perron</h3>
-
-          <p>
-            Original music and texts by
-            MEME.
-          </p>
-
-        </div>
-
-        <audio
-          controls
-          preload="metadata"
-          aria-label="MEME — Mark and Elke — Perron"
-        >
-          <source
-            src="audio/6. Perron_FINAL.mp3"
-            type="audio/mpeg"
-          >
-          Your browser does not support audio playback.
-        </audio>
-
-      </div>
-
-    </section>
-
-
-    <!-- SHOWS -->
+ <!-- SHOWS -->
 
     <section
       id="Shows"
@@ -779,6 +573,214 @@
       </div>
 
     </section>
+
+    
+    <!-- LISTEN -->
+
+    <section
+      id="listen"
+      class="music section"
+      aria-labelledby="listen-heading"
+    >
+
+      <div class="section-title">
+
+        <p class="eyebrow">
+          MEME — ORIGINAL MUSIC
+        </p>
+
+        <h2 id="listen-heading">
+          Listen
+        </h2>
+
+        <p>
+          Original music, poetry and texts by Mark Davey &amp; Elke Van De Walle.
+        </p>
+
+      </div>
+
+
+      <div class="player-card">
+
+        <div class="track-number" aria-hidden="true">01</div>
+
+        <div class="track-info">
+
+          <h3>Introduction</h3>
+
+          <p>
+            Original music and texts by
+            MEME.
+          </p>
+
+        </div>
+
+        <audio
+          controls
+          preload="metadata"
+          aria-label="MEME — Mark and Elke — Introduction"
+        >
+          <source
+            src="audio/1. Introduction_FINAL-e.mp3"
+            type="audio/mpeg"
+          >
+          Your browser does not support audio playback.
+        </audio>
+
+      </div>
+
+
+      <div class="player-card">
+
+        <div class="track-number" aria-hidden="true">02</div>
+
+        <div class="track-info">
+
+          <h3>Doh</h3>
+
+          <p>
+            Original music and texts by MEME.
+          </p>
+
+        </div>
+
+        <audio
+          controls
+          preload="metadata"
+          aria-label="MEME — Mark and Elke — Doh"
+        >
+          <source
+            src="audio/2. Doh.mp3"
+            type="audio/mpeg"
+          >
+          Your browser does not support audio playback.
+        </audio>
+
+      </div>
+
+
+      <div class="player-card">
+
+        <div class="track-number" aria-hidden="true">03</div>
+
+        <div class="track-info">
+
+          <h3>Pupil</h3>
+
+          <p>
+            Original music and texts by
+            MEME.
+          </p>
+
+        </div>
+
+        <audio
+          controls
+          preload="metadata"
+          aria-label="MEME — Mark and Elke — Pupil"
+        >
+          <source
+            src="audio/3. Pupil_FINAL-c.mp3"
+            type="audio/mpeg"
+          >
+          Your browser does not support audio playback.
+        </audio>
+
+      </div>
+
+
+      <div class="player-card">
+
+        <div class="track-number" aria-hidden="true">04</div>
+
+        <div class="track-info">
+
+          <h3>Tol</h3>
+
+          <p>
+            Original music and texts by
+            MEME.
+          </p>
+
+        </div>
+
+        <audio
+          controls
+          preload="metadata"
+          aria-label="MEME — Mark and Elke — Tol"
+        >
+          <source
+            src="audio/4. Tol_FINAL-c.mp3"
+            type="audio/mpeg"
+          >
+          Your browser does not support audio playback.
+        </audio>
+
+      </div>
+
+
+      <div class="player-card">
+
+        <div class="track-number" aria-hidden="true">05</div>
+
+        <div class="track-info">
+
+          <h3>Funky Afscheid</h3>
+
+          <p>
+            Original music and texts by MEME.
+          </p>
+
+        </div>
+
+        <audio
+          controls
+          preload="metadata"
+          aria-label="MEME — Mark and Elke — Funky Afscheid"
+        >
+          <source
+            src="audio/5. Funky_Afscheid_FINAL2c.mp3"
+            type="audio/mpeg"
+          >
+          Your browser does not support audio playback.
+        </audio>
+
+      </div>
+
+
+      <div class="player-card">
+
+        <div class="track-number" aria-hidden="true">06</div>
+
+        <div class="track-info">
+
+          <h3>Perron</h3>
+
+          <p>
+            Original music and texts by
+            MEME.
+          </p>
+
+        </div>
+
+        <audio
+          controls
+          preload="metadata"
+          aria-label="MEME — Mark and Elke — Perron"
+        >
+          <source
+            src="audio/6. Perron_FINAL.mp3"
+            type="audio/mpeg"
+          >
+          Your browser does not support audio playback.
+        </audio>
+
+      </div>
+
+    </section>
+
+
+   
 
 
     <!-- FINAL PHOTOGRAPH -->
