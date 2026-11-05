@@ -342,11 +342,11 @@ p {
 
   align-items: center;
 
-  gap: 30px;
+  gap: 20px;
 
   min-width: 0;
 
-  padding: 26px 0;
+  padding: 12px 0;
 
   border-top: 1px solid var(--line);
 }
@@ -770,7 +770,7 @@ p {
     grid-template-columns: 38px minmax(0, 1fr);
 
     gap: 14px;
-    padding: 23px 0;
+padding: 23px 0;
   }
 
   .player-card audio {
