@@ -1283,3 +1283,11 @@ footer {
 
   border-top: 1px solid var(--line);
 }
+
+/* Reduce space between second photograph and Contact section */
+
+.photo-break-cover + .contact {
+
+  padding-top: 35px;
+
+}
