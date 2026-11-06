@@ -1046,6 +1046,7 @@ padding: 12px 0;
   .photo-break-cover {
     height: 58vh;
     min-height: 360px;
+    margin-bottom: 0;
   }
 
   .photo-caption {
@@ -1192,6 +1193,7 @@ padding: 12px 0;
 
 .contact {
   text-align: center;
+  padding-top: 40px
 }
 
 .contact > p {
