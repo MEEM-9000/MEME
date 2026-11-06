@@ -649,6 +649,8 @@ p {
 
   .player-card audio {
     grid-column: 2;
+    width: 100%;
+    margin-top: 4px;
   }
 
   .event {
@@ -775,6 +777,8 @@ padding: 12px 0;
 
   .player-card audio {
     grid-column: 2;
+    width: 100%;
+    margin-top: 4px;
   }
 
   .event {
@@ -969,6 +973,8 @@ padding: 12px 0;
 
   .player-card audio {
     grid-column: 2;
+    width: 100%;
+    margin-top: 4px;
   }
 
   .track-info h3 {
