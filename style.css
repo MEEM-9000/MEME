@@ -1279,3 +1279,11 @@ footer {
   padding-top: 35px;
 
 }
+
+/* ==================================================
+   CUSTOM BUTTON COLORS
+   ================================================== */
+
+.social-button.instagram {
+  color: red;
+}
